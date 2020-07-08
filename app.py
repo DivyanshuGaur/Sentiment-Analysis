@@ -27,7 +27,15 @@ def analyse():
     index = (model.predict(test))[0]
     res=(val.get(index))
 
-    return render_template('/result.html',value=res)
+   #195e83
+    
+    if(index==1):
+
+       return render_template('/result.html',value=res)
+
+    else:
+
+        return render_template('/neg.html', value=res)
 
 
 if __name__ == '__main__':
